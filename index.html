@@ -1,0 +1,838 @@
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<title>ExtraJuice</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel = "stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+        <link rel = "stylesheet" href = "./style.css" />
+
+	</head>
+	
+	<body class="position-relative">
+
+		<button class="button-up rounded-circle py-1 px-2 position-fixed" id = 'btnup'>
+			<i class="fas fa-arrow-up"></i>
+		</button>
+
+		<form class="search-form position-fixed shadow-lg" id = 'searchBar'>
+			<div class="form-content position-relative">
+				<input class="input-form py-1 px-3" name="input-search" placeholder="search ..." id = 'inputBar'>
+				<span class="form-icon position-absolute" id ='formIcon'><i class="fas fa-search"></i></span>
+			</div>
+		</form>
+
+		<div class="_navbar min-vh-100 position-fixed d-lg-none" id = '_navbar'>
+			<div class="close-btn py-2 px-3" id = 'close-btn'>
+				<i class="fas fa-times"></i>
+			</div>
+			<div class="navbar-content">
+				<ul>
+					<li class="items item1 my-md-4 my-3"><a class="link" href='#home'>home</a></li>
+					<li class="items item1 my-md-4 my-3"><a class="link" href='#about'>about</a></li>
+					<li class="items item1 my-md-4 my-3"><a class="link" href='#services'>services</a></li>
+					<li class="items item1 my-md-4 my-3"><a class="link" href='#categories'>categories</a></li>
+					<li class="items item1 my-md-4 my-3"><a class="link" href='#menu'>menu</a></li>
+					<li class="items item1 my-md-4 my-3"><a class="link" href='#blogs'>blogs</a></li>
+					<li class="items item1 my-md-4 my-3"><a class="link" href='#reviews'>reviews</a></li>
+					<li class="items item1 my-md-4 my-3"><a class="link" href='#contact'>contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="header py-2 fixed-top" id = 'header'>
+			<div class="container">
+				<div class="header-content d-flex justify-content-between align-items-center">
+					<div class="left-side">
+						<a href = '#home' class="d-flex align-items-center">
+							<img class='brand-img me-2' src='./imgs/icon.png' alt='brand picture'>
+							<p class="brand-text" id = 'brand-title'>Extra<span><i class="fas fa-wine-glass mx-2 text-warning"></i></span><span class="brand-sub-title">Juice</span></p>
+						</a>
+					</div>
+					<div class="middle-side">
+						<ul>
+							<li class="items item1 mx-2"><a class="link" href='#home'>home</a></li>
+							<li class="items item1 mx-2"><a class="link" href='#about'>about</a></li>
+							<li class="items item1 mx-2"><a class="link" href='#services'>services</a></li>
+							<li class="items item1 mx-2"><a class="link" href='#categories'>categories</a></li>
+							<li class="items item1 mx-2"><a class="link" href='#menu'>menu</a></li>
+							<li class="items item1 mx-2"><a class="link" href='#blogs'>blogs</a></li>
+							<li class="items item1 mx-2"><a class="link" href='#reviews'>reviews</a></li>
+							<li class="items item1 mx-2"><a class="link" href='#contact'>contact</a></li>
+						</ul>
+					</div>
+					<div class=right-side>
+						<ul>
+							<li class="icons icon mx-2"><i class="fas fa-search" id = 'searchBtn'></i></li>
+							<li class="icons icon mx-2 d-inline-block d-lg-none"><i class="fas fa-bars" id = 'bars'></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="hero min-vh-100 shadow-lg" id = 'home'>
+			<div class="container">
+				<div class="hero-content d-flex justify-content-center align-items-center position-absolute translate-middle">
+					<div class="content text-center" data-aos='fade-up' data-aos-delay='150'>
+						<h4 class="hero-title mb-5">Extra<span><i class="fas fa-wine-glass mx-2 text-warning"></i></span><span class="hero-sub-title">Juice</span></h4>
+						<h6 class="hero-under-text text-muted mb-2">ready to try our menu ?</h6>
+						<p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+						<button class="hero-btn py-2 px-3 rounded mt-3"><a href = '#menu'>check our menu</a></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="about py-5 my-5" id = 'about'>
+			<div class="container py-4">
+				<div class="about-content">
+					<div class="about-title text-center pb-5">
+						<p class="title big-title">about <span class="sub-title">us</span></p>
+					</div>
+					<div class="row align-items-center justify-content-center">
+						<div class="c col-lg-6 col-11 col-md-4 mb-lg-0 mb-5">
+							<div class="left-side text-center text-lg-start"  data-aos='fade-up' data-aos-delay='150'>
+								<img class="img-fluid w-75" src = './imgs/about.svg' alt = 'about'/>
+							</div>
+						</div>
+						<div class="c col-lg-6 col-md-8 col-11">
+							<div class="right-side text-lg-start text-center"  data-aos='fade-up' data-aos-delay='150'>
+								<p class="text-muted mb-1">get to know us</p>
+								<p class="about-sub-title mb-4">Lorem Ipsum Dolor Sit Amet</p>
+								<p class="about-desc mb-4">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+								</p>
+								<button class="about-button text-capitalize py-2 px-3 rounded mx-lg-0 mx-auto"><a class="getintouch" href = '#contact'>get in touch</a></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="services py-5 my-5" id = 'services'>
+			<div class="container py-5">
+				<div class="services-content">
+					<div class="services-title text-center pb-5">
+						<p class="title big-title">our <span class="sub-title">services</span></p>
+					</div>
+					<div class="row align-items-center">
+						<div class="c col-lg-6 col-11">
+							<div class="left-side mb-lg-0 mb-5"  data-aos='fade-up' data-aos-delay='150'>
+								<div class="box mb-5 d-flex align-items-center">
+									<div class="img w-25 me-4">
+										<img class="img-fluid w-100" src = './imgs/best-quality.svg' alt='best quality'/>
+									</div>
+									<div class="text">
+										<p class="box-title">best quality</p>
+										<p class="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+									</div>
+								</div>
+								<div class="box mb-5 d-flex align-items-center">
+									<div class="img w-25 me-4">
+										<img class="img-fluid w-100" src = './imgs/daily-service.svg' alt='daily service'/>
+									</div>
+									<div class="text">
+										<p class="box-title">24/7 available</p>
+										<p class="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+									</div>
+								</div>
+								<div class="box d-flex align-items-center">
+									<div class="img w-25 me-4">
+										<img class="img-fluid w-100"  src = './imgs/free-delivery.svg' alt='free delivery'/>
+									</div>
+									<div class="text">
+										<p class="box-title">free delivery</p>
+										<p class="box-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c col-lg-6 col-11 text-center text-lg-end"  data-aos='fade-up' data-aos-delay='150'>
+							<img class="img-fluid w-75" src = './imgs/services.svg' alt = 'services img'>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="categories py-5 my-5" id = 'categories'>
+			<div class="container py-5">
+				<div class="categories-content">
+					<div class="categories-title text-center pb-5">
+						<p class="title big-title">our <span class="sub-title">categories</span></p>
+					</div>
+					<div class="row justify-content-center">
+						<div class="c col-lg-4 col-md-6 col-10 mb-lg-0 mb-5" data-aos='flip-left' data-aos-delay='150'>
+							<div class="items item1 text-center p-3 shadow">
+								<img class="img-fluid mb-4" src = './imgs/juices.png'  alt = 'juice'/>
+								<p class="c-title mb-4">fruits juices</p>
+								<p class="c-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+							</div>
+						</div>
+						<div class="c col-lg-4 col-md-6 col-10 mb-lg-0 mb-5" data-aos='fade-up' data-aos-delay='250'>
+							<div class="items item1 text-center p-3 shadow">
+								<img class="img-fluid mb-4" src = './imgs/fast-foods.png'  alt = 'fast food'/>
+								<p class="c-title mb-4">fast foods</p>
+								<p class="c-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+							</div>
+						</div>
+						<div class="c col-lg-4 col-md-6 col-10 mb-lg-0" data-aos='flip-right' data-aos-delay='350'>
+							<div class="items item1 text-center p-3 shadow">
+								<img class="img-fluid mb-4" src = './imgs/chips.png'  alt = 'chips'/>
+								<p class="c-title mb-4">chips</p>
+								<p class="c-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu py-5 mb-5" id='menu'>
+			<div class="container py-5">
+				<div class="menu-content">
+					<div class="menu-title text-center pb-4">
+						<p class="title big-title">our <span class="sub-title">menu</span></p>
+					</div>
+					<div class="r">
+						<div class="c">
+							<div class="products swiper mb-3" data-aos='fade-up' date-aos-delay='150'>
+								<div class="wrapper py-3 swiper-wrapper">
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/1.png" alt='product 1' />
+										<h6 class="product-name mb-2">Lemon Leaf</h6>
+										<p class="product-price text-muted mb-2">$2.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/2.png" alt='product 2' />
+										<h6 class="product-name mb-2">Lemonade</h6>
+										<p class="product-price text-muted mb-2">$4.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/3.png" alt='product 3' />
+										<h6 class="product-name mb-2">Watermelon</h6>
+										<p class="product-price text-muted mb-2">$5.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/4.png" alt='product 4' />
+										<h6 class="product-name mb-2">Lemon Tea</h6>
+										<p class="product-price text-muted mb-2">$6.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/5.png" alt='product 5' />
+										<h6 class="product-name mb-2">Coconut</h6>
+										<p class="product-price text-muted mb-2">$7.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/6.png" alt='product 6' />
+										<h6 class="product-name mb-2">Watermelon</h6>
+										<p class="product-price text-muted mb-2">$8.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+								</div>
+							</div>
+							<div class="products swiper mb-3" data-aos='fade-up' date-aos-delay='150'>
+								<div class="wrapper py-3 swiper-wrapper">
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/7.png" alt='product 7' />
+										<h6 class="product-name mb-2">burger</h6>
+										<p class="product-price text-muted mb-2">$10.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/8.png" alt='product 8' />
+										<h6 class="product-name mb-2">hot dog</h6>
+										<p class="product-price text-muted mb-2">$14.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/9.png" alt='product 9' />
+										<h6 class="product-name mb-2">sandwich</h6>
+										<p class="product-price text-muted mb-2">$15.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/10.png" alt='product 10' />
+										<h6 class="product-name mb-2">burger</h6>
+										<p class="product-price text-muted mb-2">$5.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/11.png" alt='product 11' />
+										<h6 class="product-name mb-2">burger</h6>
+										<p class="product-price text-muted mb-2">$14.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/12.png" alt='product 12' />
+										<h6 class="product-name mb-2">hot dog</h6>
+										<p class="product-price text-muted mb-2">$10.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+								</div>
+							</div>
+							<div class="products swiper mb-3" data-aos='fade-up' date-aos-delay='150'>
+								<div class="wrapper py-3 swiper-wrapper">
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/13.png" alt='product 13' />
+										<h6 class="product-name mb-2">chips</h6>
+										<p class="product-price text-muted mb-2">$4.99 - $10.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/14.png" alt='product 14' />
+										<h6 class="product-name mb-2">fries</h6>
+										<p class="product-price text-muted mb-2">$4.99 - $10.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/15.png" alt='product 15' />
+										<h6 class="product-name mb-2">chips</h6>
+										<p class="product-price text-muted mb-2">$4.99 - $10.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/16.png" alt='product 16' />
+										<h6 class="product-name mb-2">fried chicken</h6>
+										<p class="product-price text-muted mb-2">$4.99 - $10.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/17.png" alt='product 17' />
+										<h6 class="product-name mb-2">fried chicken</h6>
+										<p class="product-price text-muted mb-2">$4.99 - $10.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+									<div class="box shadow bg-white p-3 text-center swiper-slide">
+										<img class="product-img img-fluid mb-3" src="./imgs/18.png" alt='product 18' />
+										<h6 class="product-name mb-2">kebab</h6>
+										<p class="product-price text-muted mb-2">$4.99 - $10.99</p>
+										<div class="product-rate mb-4">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star-half-alt"></i>
+										</div>
+										<button class="btn add-to-cart text-capitalize py-2 px-3 rounded">add to cart</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="blogs py-5 my-5" id = 'blogs'>
+			<div class="container py-5">
+				<div class="blogs-content">
+					<div class="blogs-title text-center pb-4">
+						<p class="title big-title">our <span class="sub-title">blogs</span></p>
+					</div>
+					<div class="row justify-content-center">
+						<div class="c col-lg-4 col-md-6 col-11 mb-4" data-aos='fade-up' data-aos-delay='100'>
+							<div class="card shadow">
+								<img src="./imgs/1.jpg" class="card-img-top mb-2" alt = 'blog 1' />
+								<div class="card-body">
+									<div class="body-top mb-3 d-flex justify-content-between">
+										<span class="poster"><i class="fas fa-user me-2"></i>by admin</span>
+										<span class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</span>
+									</div>
+									<div class="body-middle mb-2">
+										<p class="blog-desc py-3 ps-2">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+										</p>
+									</div>
+									<div class="body-bottom d-flex flex-wrap justify-content-between align-items-center">
+										<button class="blog-btn py-2 px-3 mb-lg-2 mb-0 rounded text-capitalize">read more</button>
+										<p class="post-date text-muted">November 15, 2019</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c col-lg-4 col-md-6 col-11 mb-4" data-aos='fade-up' data-aos-delay='100'>
+							<div class="card shadow">
+								<img src="./imgs/2.jpg" class="card-img-top mb-2" alt = 'blog 2' />
+								<div class="card-body">
+									<div class="body-top mb-3 d-flex justify-content-between">
+										<span class="poster"><i class="fas fa-user me-2"></i>by admin</span>
+										<span class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</span>
+									</div>
+									<div class="body-middle mb-2">
+										<p class="blog-desc py-3 ps-2">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+										</p>
+									</div>
+									<div class="body-bottom d-flex flex-wrap justify-content-between align-items-center">
+										<button class="blog-btn py-2 px-3 mb-lg-2 mb-0 rounded text-capitalize">read more</button>
+										<p class="post-date text-muted">November 16, 2019</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c col-lg-4 col-md-6 col-11 mb-4" data-aos='fade-up' data-aos-delay='100'>
+							<div class="card shadow">
+								<img src="./imgs/3.jpg" class="card-img-top mb-2" alt = 'blog 3' />
+								<div class="card-body">
+									<div class="body-top mb-3 d-flex justify-content-between">
+										<span class="poster"><i class="fas fa-user me-2"></i>by admin</span>
+										<span class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</span>
+									</div>
+									<div class="body-middle mb-2">
+										<p class="blog-desc py-3 ps-2">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+										</p>
+									</div>
+									<div class="body-bottom d-flex flex-wrap justify-content-between align-items-center">
+										<button class="blog-btn py-2 px-3 mb-lg-2 mb-0 rounded text-capitalize">read more</button>
+										<p class="post-date text-muted">November 17, 2019</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c col-lg-4 col-md-6 col-11 mb-4" data-aos='fade-up' data-aos-delay='100'>
+							<div class="card shadow">
+								<img src="./imgs/4.jpg" class="card-img-top mb-2" alt = 'blog 4' />
+								<div class="card-body">
+									<div class="body-top mb-3 d-flex justify-content-between">
+										<span class="poster"><i class="fas fa-user me-2"></i>by admin</span>
+										<span class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</span>
+									</div>
+									<div class="body-middle mb-2">
+										<p class="blog-desc py-3 ps-2">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+										</p>
+									</div>
+									<div class="body-bottom d-flex flex-wrap justify-content-between align-items-center">
+										<button class="blog-btn py-2 px-3 mb-lg-2 mb-0 rounded text-capitalize">read more</button>
+										<p class="post-date text-muted">November 18, 2019</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c col-lg-4 col-md-6 col-11 mb-4" data-aos='fade-up' data-aos-delay='100'>
+							<div class="card shadow">
+								<img src="./imgs/5.jpg" class="card-img-top mb-2" alt = 'blog 5' />
+								<div class="card-body">
+									<div class="body-top mb-3 d-flex justify-content-between">
+										<span class="poster"><i class="fas fa-user me-2"></i>by admin</span>
+										<span class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</span>
+									</div>
+									<div class="body-middle mb-2">
+										<p class="blog-desc py-3 ps-2">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+										</p>
+									</div>
+									<div class="body-bottom d-flex flex-wrap justify-content-between align-items-center">
+										<button class="blog-btn py-2 px-3 mb-lg-2 mb-0 rounded text-capitalize">read more</button>
+										<p class="post-date text-muted">November 19, 2019</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c col-lg-4 col-md-6 col-11 mb-4" data-aos='fade-up' data-aos-delay='100'>
+							<div class="card shadow">
+								<img src="./imgs/6.jpg" class="card-img-top mb-2" alt = 'blog 6' />
+								<div class="card-body">
+									<div class="body-top mb-3 d-flex justify-content-between">
+										<span class="poster"><i class="fas fa-user me-2"></i>by admin</span>
+										<span class="stars">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+										</span>
+									</div>
+									<div class="body-middle mb-2">
+										<p class="blog-desc py-3 ps-2">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
+										</p>
+									</div>
+									<div class="body-bottom d-flex flex-wrap justify-content-between align-items-center">
+										<button class="blog-btn py-2 px-3 mb-lg-2 mb-0 rounded text-capitalize">read more</button>
+										<p class="post-date text-muted">November 20, 2019</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="reviews py-5 my-5" id ='reviews'>
+			<div class="container py-4">
+				<div class="reviews-content">
+					<div class="reviews-title text-center pb-5">
+						<p class="title big-title">our customers <span class="sub-title">reviews</span></p>
+					</div>
+					<div class="row justify-content-center">
+						<div class="c col-lg-8 col-11" data-aos='fade-up' data-aos-delay='150'>
+							<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+							  	<div class="carousel-indicators">
+							    	<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+							    	<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+							    	<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+							  	</div>
+								<div class="carousel-inner py-3">
+									<div class="testimonial carousel-item active shadow bg-white p-4 mb-5">
+										<div class="tes-user-profile mb-3 d-flex align-items-center">
+											<img class="img-thumbnail rounded-circle me-3" src='./imgs/user-1.jpg'  alt="testimonial 1"/>
+											<div class="user-names">
+												<h5 class="user-name">jack ederson</h5>
+												<h6 class="user-activity text-muted">ex chef</h6>
+											</div>
+										</div>
+										<p class="user-text mb-3 text-muted">
+											orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+										<div class="user-rate">
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+										</div>
+									</div>
+									<div class="testimonial carousel-item shadow bg-white p-4 mb-5">
+										<div class="tes-user-profile mb-3 d-flex align-items-center">
+											<img class="img-thumbnail rounded-circle me-3" src='./imgs/user-2.jpg'  alt="testimonial 2"/>
+											<div class="user-names">
+												<h5 class="user-name">emilia suarez</h5>
+												<h6 class="user-activity text-muted">client</h6>
+											</div>
+										</div>
+										<p class="user-text mb-3 text-muted">
+											orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+										<div class="user-rate">
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+										</div>
+									</div>
+									<div class="testimonial carousel-item shadow bg-white p-4 mb-5">
+										<div class="tes-user-profile mb-3 d-flex align-items-center">
+											<img class="img-thumbnail rounded-circle me-3" src='./imgs/user-3.jpg' alt="testimonial 3" />
+											<div class="user-names">
+												<h5 class="user-name">alberto emerson</h5>
+												<h6 class="user-activity text-muted">client</h6>
+											</div>
+										</div>
+										<p class="user-text mb-3 text-muted">
+											orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+										<div class="user-rate">
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+											<i class="fas fa-star me-1"></i>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="contact py-5 my-5" id = 'contact'>
+			<div class="container py-5">
+				<div class="contact-content">
+					<div class="contact-title text-center pb-5">
+						<p class="title big-title">contact <span class="sub-title">us</span></p>
+					</div>
+					<div class="row align-items-center">
+						<div class="c col-lg-6 col-12 mb-lg-0 mb-5">
+							<div class="left-side">
+								<div class = 'row'>
+									<div class = "form-group c col-md-6 col-12 mb-3" data-aos='fade-up' data-aos-delay='150'>
+								      	<label htmlFor = "last_name" class = 'mb-2'>first name</label>
+								      	<input type = "text" class = "form-control py-2 px-3" id = "first_name" placeholder="First Name" required/>
+								    </div>
+								    <div class = "form-group c col-md-6 col-12 mb-3" data-aos='fade-up' data-aos-delay='200'>
+								      	<label htmlFor = "last_name" class = 'mb-2'>last name</label>
+								      	<input type = "text" class = "form-control py-2 px-3" id = "last_name" placeholder="Last Name" required/>
+								    </div>
+								    <div class = "form-group c col-12 mb-3" data-aos='fade-up' data-aos-delay='250'>
+								      	<label htmlFor = "e-mail" class = 'mb-2'>Email</label>
+								      	<input type = "email" class = "form-control py-2 px-3" id = "e-mail" placeholder="Email Address" required/>
+								    </div>
+								    <div class = "form-group c col-12 mb-4" data-aos='fade-up' data-aos-delay='300'>
+								      	<label htmlFor = "textarea" class = 'mb-2'>write your message down here</label>
+								      	<textarea class = "form-control py-2 px-3" id = "textarea" rows = '3'></textarea>
+								    </div>
+								    <button class = 'contact-btn py-2 px-3 mx-auto rounded text-capitalize w-25'>send</button>
+								</div>
+							</div>
+						</div>
+						<div class="c col-lg-6 col-12">
+							<div class="right-side text-lg-end text-center" data-aos='fade-up' data-aos-delay='350'>
+								<img class="img-fluid w-75" src="./imgs/contact.svg" alt = 'contact' />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer py-4">
+			<div class="container">
+				<div class="footer-content">
+					<div class="row mb-3">
+						<div class="c col-lg-6 col-12 mb-5" data-aos='fade-up' data-aos-delay='150'>
+							<p class="footer-text mb-3" id = 'brand-title'>Extra<span><i class="fas fa-wine-glass mx-2 text-warning">	
+								</i></span><span class="brand-sub-title">Juice</span>
+							</p>
+							<p class="footer-desc pb-4 me-4 mb-3">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam							</p>
+							<p class="info email    text-muted py-1"><i class="fas fa-envelope me-2"></i>extrajuice@support.com</p>
+							<p class="info number   text-muted py-1"><i class="fas fa-phone-alt me-2"></i>(405) 247-9102</p>
+							<p class="info location text-muted py-1"><i class="fas fa-map-marker-alt py-1 me-2"></i>642 Morning Dr Owatonna, Minnesota(MN), 55060</p>
+						</div>
+						<div class="c col-lg-3 col-12 mb-3" data-aos='fade-up' data-aos-delay='250'>
+							<div class="quick-links">
+								<h6 class="ql mb-4">quick links</h6>
+								<div class="links">
+									<ul>
+										<li class="items item1 my-2"><a class="link" href='#home'><i class = 'fas fa-arrow-right me-2'></i>home</a></li>
+										<li class="items item1 my-2"><a class="link" href='#about'><i class = 'fas fa-arrow-right me-2'></i>about</a></li>
+										<li class="items item1 my-2"><a class="link" href='#services'><i class = 'fas fa-arrow-right me-2'></i>services</a></li>
+										<li class="items item1 my-2"><a class="link" href='#categories'><i class = 'fas fa-arrow-right me-2'></i>categories</a></li>
+										<li class="items item1 my-2"><a class="link" href='#menu'><i class = 'fas fa-arrow-right me-2'></i>menu</a></li>
+										<li class="items item1 my-2"><a class="link" href='#blogs'><i class = 'fas fa-arrow-right me-2'></i>blogs</a></li>
+										<li class="items item1 my-2"><a class="link" href='#reviews'><i class = 'fas fa-arrow-right me-2'></i>reviews</a></li>
+										<li class="items item1 my-2"><a class="link" href='#contact'><i class = 'fas fa-arrow-right me-2'></i>contact</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="c col-lg-3 col-12 mb-3" data-aos='fade-up' data-aos-delay='350'>
+							<div class="quick-links">
+								<h6 class="ql mb-4">follow us</h6>
+								<div class="links">
+									<ul>
+										<li class="items item1 my-2"><a class="link" href='https://www.facebook.com/' target = '_blank'><i class = 'fas fa-arrow-right me-2'></i>facebook</a></li>
+										<li class="items item1 my-2"><a class="link" href='https://www.instagram.com/' target = '_blank'><i class = 'fas fa-arrow-right me-2'></i>instagram</a></li>
+										<li class="items item1 my-2"><a class="link" href='https://www.twitter.com/' target = '_blank'><i class = 'fas fa-arrow-right me-2'></i>twitter</a></li>
+										<li class="items item1 my-2"><a class="link" href='https://www.pinterest.com/' target = '_blank'><i class = 'fas fa-arrow-right me-2'></i>pinterest</a></li>
+										<li class="items item1 my-2"><a class="link" href='https://www.youtube.com/' target = '_blank'><i class = 'fas fa-arrow-right me-2'></i>youtube</a></li>
+										<li class="items item1 my-2"><a class="link" href='https://www.unsplash.com/' target = '_blank'><i class = 'fas fa-arrow-right me-2'></i>unsplash</a></li>
+										<li class="items item1 my-2"><a class="link" href='https://www.snapchat.com/' target = '_blank'><i class = 'fas fa-arrow-right me-2'></i>snapchat</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="copyright text-center">
+						<p class="small text-muted mb-0">© Copyrights. All rights reserved</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src = './script.js'></script>
+        <script>
+        	AOS.init({
+        		duration: 800
+        	})
+
+        	var swiper = new Swiper(".products", {
+		        loop: true,
+		        spaceBetween: 20,
+		        autoplay :
+		        {
+		        	delay: 6000,
+		        	disableOnInteraction: false
+		        },
+		        conteredslides: true ,
+		        breakpoints: {
+		          0: {
+		            slidesPerView: 1,
+		          },
+		          768: {
+		            slidesPerView: 2,
+		          },
+		          1024: {
+		            slidesPerView: 4,
+		          },
+		        },
+		      });
+        </script>
+
+	</body>
+</html>

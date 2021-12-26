@@ -1,0 +1,800 @@
+
+$or: #ff5722 ;
+$lg: #F8F9F9 ;
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+	text-transform: capitalize;
+	box-sizing: border-box;
+	transition: all ease 0.3s;
+	list-style: none;
+	outline: none;
+	border: none ;
+	letter-spacing: 1px;
+}
+
+a {text-decoration: none; color: black ;}
+ul, p {margin: 0 ;}
+html {scroll-behavior: smooth;}
+
+
+.big-title
+{
+	font-size: 25px ;
+	font-weight: 800;
+}
+
+.sub-title
+{
+	display: inline-block ;
+	padding: 5px 30px ;
+	color: white ;
+	background: $or ;
+	clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+@mixin button()
+{
+	background: none ;
+	font-weight: bold ;
+	border: 1px solid $or ;
+	font-size: 15px;
+}
+
+@mixin icon()
+{
+	display: inline-block;
+	cursor: pointer;
+}
+
+@mixin iconhover()
+{
+	color: $or;
+	transform: scale(1.05);
+}
+
+@mixin beforeafter($t, $l, $b, $r)
+{
+	transition: all ease 0.3s;
+	content: '' ;
+	width: 0 ;
+	height: 2px ;
+	background-color: $or;
+	position: absolute ;
+	top: $t ;
+	left: $l ;
+	bottom: $b ;
+	right: $r ;
+}
+
+@mixin anchors()
+{
+	position: relative;
+	font-weight: bolder ;
+	padding: 7px 0;
+}
+
+body
+{
+	background: $lg ;
+	.header
+	{
+		background-color: none ;
+		color: white ;
+		&.bg-toggle
+		{
+			background-color: $lg;
+			color: black ;
+		}
+		.container
+		{
+			.header-content
+			{
+				.left-side
+				{
+					a
+					{
+						color: white ;
+						.brand-img
+						{
+							width: 30px ;
+							height: 30px ;
+						}
+						.brand-text
+						{
+							&.color-toggle
+							{
+								color: black ;
+							}
+							font-weight: bolder ;
+							font-size: 20px;
+							.brand-sub-title
+							{
+								color: $or ;
+								font-weight: 800;
+							}
+							&:hover
+							{
+								color: $or ;
+								.fa-wine-glass
+								{
+									transform: rotate(-360deg);
+								}
+							}
+						}
+						&:hover
+						{
+							img
+							{
+								transform: rotate(360deg);
+							}
+						}
+					}
+				}
+				.middle-side
+				{
+					ul
+					{
+						.items
+						{
+							display: inline-block ;
+							a
+							{
+								color: white ;
+								&.color-toggle
+								{
+									color: black ;
+								}
+								&:hover
+								{
+									color: $or ;
+									&:before, &:after
+									{
+										width: 100% ;
+									}
+								}
+								@include anchors() ;
+								&:before
+								{
+									@include beforeafter(0, 0, unset, unset) ;
+								}
+								&:after
+								{
+									@include beforeafter(unset, unset, 0, 0) ;
+								}
+							}
+						}
+					}
+				}
+				.right-side
+				{
+					ul
+					{
+						margin: 0 ;
+						.icons
+						{
+							@include icon() ;
+							&:hover
+							{
+								@include iconhover() ;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.hero
+	{
+		color: white ;
+		background: url('./imgs/cover.jpg') ;
+		background-position: center ;
+		background-repeat: no-repeat;
+		position: relative ;
+		&:before
+		{
+			content: '' ;
+			position: absolute;
+			top: 0 ;
+			left: 0 ;
+			right: 0 ;
+			bottom: 0 ;
+			background-color: rgba(0, 0, 0, .8);
+		}
+		.container
+		{
+			.hero-content
+			{
+				top: 55% ;
+				left: 50% ;
+				.content
+				{
+					.hero-title
+					{
+						font-size: 30px;
+						font-weight: bolder ;
+						.hero-sub-title
+						{
+							color: $or ;
+						}
+					}
+					.hero-under-text
+					{
+						font-weight: bolder;
+					}
+					.hero-btn
+					{
+						@include button() ;
+						a
+						{
+							color: $or ;
+						}
+						&:hover
+						{
+							background-color: $or ;
+							a
+							{
+								color: white ;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.about
+	{
+		.container
+		{
+			.about-content
+			{
+				.row
+				{
+					.c
+					{
+						.right-side
+						{
+							p:first-child
+							{
+								font-weight: bold;
+							}
+							.about-sub-title
+							{
+								font-weight: 800;
+								color: $or ;
+								font-size: 30px;
+							}
+							.about-button
+							{
+								@include button() ;
+								&:hover
+								{
+									background: $or ;
+									.getintouch
+									{
+										color: white;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.services
+	{
+		.container
+		{
+			.services-content
+			{
+				.row
+				{
+					.c
+					{
+						.left-side
+						{
+							.box
+							{
+								.text
+								{
+									.box-title
+									{
+										font-weight: 800 ;
+										color: $or ;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+
+	.categories
+	{
+		.container
+		{
+			.categories-content
+			{
+				.row
+				{
+					.c, .c .items
+					{
+						border-radius: 10px ;
+						.items
+						{
+							&:hover
+							{
+								img
+								{
+									transform: translateY(-15px);
+								}
+							}
+							background: white ;
+							img
+							{
+								width: 150px ;
+								height: 150px ;
+							}
+							.c-title
+							{
+								font-weight: 800 ;
+								color: $or ;
+								font-size: 20px ;
+							}
+							.c-desc
+							{
+								font-weight: bold;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.menu
+	{
+		.container
+		{
+			.menu-content
+			{
+				.r
+				{
+					.c
+					{
+						.products
+						{
+							.wrapper
+							{
+								.box
+								{
+									border-radius: 5px ;
+									border: 2px solid transparent;
+									transition: all ease .5s;
+									&:hover
+									{
+										border: 2px solid $or ;
+									}
+									.product-img
+									{
+										height: 150px ;
+										width: 100px ;
+									}
+									.product-name, .product-price
+									{
+										font-weight: bold ;
+									}
+									.product-rate
+									{
+										.fas
+										{
+											color: $or ;
+											font-size: 14px;
+										}
+									}
+									.add-to-cart
+									{
+										@include button() ;
+										&:hover
+										{
+											color: white ;
+											background: $or ;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.blogs
+	{
+		.container
+		{
+			.blogs-content
+			{
+				.row
+				{
+					.c
+					{
+						&:hover
+						{
+							transform: scale(1.03);
+						}
+						border-radius: 10px ;
+						.card
+						{
+							.card-img-top
+							{
+								border-top-left-radius: 10px ;
+								border-top-right-radius: 10px ;
+							}
+							border-radius: 10px ;
+							.card-body
+							{
+								.body-top
+								{
+									.poster
+									{
+										font-weight: bold;
+										.fas
+										{
+											color: $or ;
+										}
+									}
+									.stars
+									{
+										& > *
+										{
+											font-size: 12px;
+											color: $or ;
+										}
+									}
+								}
+								.body-middle
+								{
+									font-size: 15px ;
+									border-top: 1px solid $or ;
+								}
+								.body-bottom
+								{
+									font-weight: bold;
+									font-size: 15px ;
+									.blog-btn
+									{
+										color: white ;
+										background: $or ;
+										font-weight: bold ;
+										border: 1px solid $or ;
+										font-size: 15px ;
+										&:hover
+										{
+											background-color: rgba(255, 87, 34, 0.9);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.reviews
+	{
+		.container
+		{
+			.reviews-content
+			{
+				.row
+				{
+					.c
+					{
+						.slide
+						{
+							button
+							{
+								background: $or ;
+							}
+						}
+						.testimonial
+						{
+							border-radius: 5px ;
+							.tes-user-profile
+							{
+								img
+								{
+									width: 100px ;
+									height: 100px ;
+								}
+								.user-names
+								{
+									& > *
+									{
+										font-weight: bold;
+									}
+									.user-name
+									{
+										font-weight: 20px;
+									}
+									.user-activity
+									{
+										font-size: 15px;
+									}
+								}
+							}
+							.user-rate
+							{
+								.fa-star
+								{
+									font-size: 12px ;
+									color: $or ;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.contact
+	{
+		.container
+		{
+			.contact-content
+			{
+				.row
+				{
+					.c
+					{
+						.left-side
+						{
+							.row
+							{
+								.c
+								{
+									label
+									{
+										font-weight: bold;
+									}
+								}
+								.contact-btn
+								{
+									@include button() ;
+									&:hover
+									{
+										color: white ;
+										background: $or ;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer
+	{
+		background: white ;
+		.container
+		{
+			.footer-content
+			{
+				.row
+				{
+					.c
+					{
+						.footer-text
+						{
+							color: $or ;
+							font-size: 20px ;
+							font-weight: bolder;
+						}
+						.footer-desc
+						{
+							font-size: 15px ;
+							border-bottom: 1px solid $or ;
+						}
+						.info
+						{
+							text-transform: none;
+							font-size: 15px;
+							font-weight: 800;
+						}
+						.quick-links
+						{
+							.ql
+							{
+								font-weight: 800;
+								font-size: 20px;
+							}
+							ul
+							{
+								padding:0 ;
+								margin: 0;
+								li
+								{
+									display: block;
+									margin: 0 ;
+									a
+									{
+										color: grey ;
+										&:hover
+										{
+											font-weight: bold;
+											.fa-arrow-right
+											{
+												padding-right: 10px;
+											}
+											color: $or ;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.copyright
+				{
+					p
+					{
+						font-weight: bold;
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.search-form
+{
+	color: black ;
+	width: 25% ;
+	z-index: 1000 ;
+	top: 15% ;
+	right: -115% ;
+	&.show
+	{
+		right: 2% ;
+	}
+	.form-content
+	{
+		width: 100% ;
+		.input-form
+		{
+			width: inherit;
+			color: black ;
+			background: $lg ;
+			border-radius: 10px ;
+			text-transform: none;
+			border: 2px solid $or ;
+			border-radius: 7px ;
+			font-weight: bold;
+		}
+		.form-icon
+		{
+			opacity: 0 ;
+			top: 50% ;
+			right: 3% ;
+			transform: translateY(-50%);
+			cursor: pointer;
+			&.icon-opacity
+			{
+				opacity: 1;
+			}
+			&:hover
+			{
+				color: $or ;
+			}
+		}
+	}
+}
+
+._navbar
+{
+	right: -110% ;
+	z-index: 10001 ;
+	width: 25% ;
+	background-color: $lg ;
+	&.navbar-show
+	{
+		right: 0 ;
+	}
+	.close-btn
+	{
+		font-size: 20px;
+		@include icon() ;
+		&:hover
+		{
+			@include iconhover() ;
+		}
+	}
+	.navbar-content
+	{
+		ul
+		{
+			li
+			{
+				display: block ;
+				a
+				{
+					&:hover
+					{
+						color: $or ;
+						&:before, &:after
+						{
+							width: 100% ;
+						}
+					}
+					@include anchors() ;
+					&:before
+					{
+						@include beforeafter(0, 0, unset, unset) ;
+					}
+					&:after
+					{
+						@include beforeafter(unset, unset, 0, 0) ;
+					}
+				}
+			}
+		}
+	}
+}
+
+.button-up
+{
+	color: white ;
+	background-color: $or ;
+	z-index: 1000 ;
+	bottom: 5% ;
+	right: -110% ;
+	&.showbtn
+	{
+		right: 2% ;
+	}
+	&:hover
+	{
+		transform: scale(1.01);
+	}
+}
+
+@media (max-width: 992px)
+{
+	.middle-side
+	{
+		display: none;
+	}
+	.search-form
+	{
+		width: 50% ;
+	}
+}
+
+@media (max-width: 576px)
+{
+	._navbar
+	{
+		width: 50% ;
+	}
+	.search-form
+	{
+		width: 75% ;
+	}
+}
