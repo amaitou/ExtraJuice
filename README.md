@@ -5,7 +5,7 @@
 
 ## About
 
-**[ExtraJuice](https://lelouche01.github.io/ExtraJuice)** Is A Responsive Landing Page For Restaurant 
+**[ExtraJuice](https://amaitou.github.io/ExtraJuice)** Is A Responsive Landing Page For Restaurant 
 
 ## Contact Me
 
